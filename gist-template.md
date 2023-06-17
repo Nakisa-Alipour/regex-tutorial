@@ -4,11 +4,11 @@ This tutorial aims to provide a comprehensive breakdown and explanation of one o
 
 In this tutorial, we will dive into the intricacies of the Matching an Email and explore each component in detail. By the end, you will have a solid understanding of how the regex functions and how its individual parts contribute to defining the search pattern.
 
-***
 
 ## Summary of the Regex Pattern: Matching an Email
 
 The chosen regex pattern for this tutorial is designed to match and validate email addresses. Emails are widely used in various web applications, and it's essential to ensure that user input adheres to a valid email format. The provided regex pattern /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ incorporates multiple components to accurately validate an email address. By understanding each component and its role, developers can efficiently utilize this regex pattern to validate user input and ensure the integrity of email data.
+
 
 ## Table of Contents
 
@@ -21,7 +21,10 @@ The chosen regex pattern for this tutorial is designed to match and validate ema
 - [Flags](#flags)
 - [Character Escapes](#character-escapes)
 
+***
+
 ## Regex Components
+
 **Component 1: ^([a-z0-9_\.-]+)**
 
 This component ensures that the email address starts with a valid username. It allows a combination of lowercase letters, numbers, underscores, dots, and hyphens. The + indicates that one or more characters from the defined set can be present.
@@ -52,7 +55,9 @@ The email address "john.doe@example.com" satisfies this component, with the TLD 
 The email address "johndoe123@gmail.co.uk" also satisfies this component, with the TLD "co.uk" matching the pattern.
 However, the email address "john.doe@example" would not match this component since the TLD length is less than 2 characters.
 
-[🔼back to top](#table-of-contents)
+[🔼back to Table of contents ](#table-of-contents)
+
+***
   
 ### Anchors
 
@@ -75,7 +80,9 @@ However, the email address "john.doe@example.com " (with trailing spaces) would 
 
 By using the ^ and $ anchors appropriately, we can precisely define the boundaries of the email address within the input string and ensure that it conforms to the desired structure.
 
-[🔼back to top](#Table-of-Contents)
+[🔼back to Table of contents ](#table-of-contents)
+
+***
 
 ### Quantifiers
 
@@ -96,7 +103,9 @@ For example:
 The email address "john.doe@example.com" satisfies this quantifier since the TLD "com" falls within the specified range of 2 to 6 characters.
 However, the email address "john.doe@example" would not match this pattern since the TLD "example" exceeds the maximum limit of 6 characters.
 
-[🔼back to top](#Table-of-Contents)
+[🔼back to Table of contents ](#table-of-contents)
+
+***
 
 ### Grouping Constructs
 
@@ -120,15 +129,22 @@ This group represents the top-level domain section of the email address.
 It allows for a sequence of lowercase letters or dots, with a minimum length of 2 and a maximum length of 6.
 By utilizing grouping constructs, we can establish the structure and enforce the desired patterns for each section of the email address. This helps ensure that the email address matches the expected format.
 
-[🔼back to top](#Table-of-Contents)
+
+[🔼back to Table of contents ](#table-of-contents)
+
+***
 
 ### Bracket Expressions
 
-[🔼back to top](#Table-of-Contents)
+[🔼back to Table of contents ](#table-of-contents)
+
+***
 
 ### Character Classes
 
-[🔼back to top](#Table-of-Contents)
+[🔼back to Table of contents ](#table-of-contents)
+
+***
 
 ### The OR Operator
 
@@ -138,18 +154,24 @@ For example, if we wanted to match email addresses that end with either ".com" o
 
 In this modified pattern, (com|net) signifies that the TLD can be either "com" or "net". The OR operator allows us to create a choice between the two options. If the TLD matches either "com" or "net", the email address will be considered a match.
 
-[🔼back to top](#Table-of-Contents)
+[🔼back to Table of contents ](#table-of-contents)
+
+***
 
 ### Flags
 
-[🔼back to top](#Table-of-Contents)
+[🔼back to Table of contents ](#table-of-contents)
+
+***
 
 ### Character Escapes
 
-[🔼back to top](#Table-of-Contents)
+[🔼back to Table of contents ](#table-of-contents)
+
+***
 
 ## Author
 
 A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
 
-[🔼back to top](#Table-of-Contents)
+[🔼back to Table of contents ](#table-of-contents)
