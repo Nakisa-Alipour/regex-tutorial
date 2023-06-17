@@ -4,11 +4,13 @@ This tutorial aims to provide a comprehensive breakdown and explanation of one o
 
 In this tutorial, we will dive into the intricacies of the Matching an Email and explore each component in detail. By the end, you will have a solid understanding of how the regex functions and how its individual parts contribute to defining the search pattern.
 
+
 ***
 
 ## Summary of the Regex Pattern: Matching an Email
 
 The chosen regex pattern for this tutorial is designed to match and validate email addresses. Emails are widely used in various web applications, and it's essential to ensure that user input adheres to a valid email format. The provided regex pattern /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ incorporates multiple components to accurately validate an email address. By understanding each component and its role, developers can efficiently utilize this regex pattern to validate user input and ensure the integrity of email data.
+
 
 ***
 
@@ -21,6 +23,7 @@ The chosen regex pattern for this tutorial is designed to match and validate ema
 - [The OR Operator](#the-or-operator)
 - [Flags](#flags)
 - [Character Escapes](#character-escapes)
+
 
 ***
 
@@ -56,7 +59,8 @@ The email address "john.doe@example.com" satisfies this component, with the TLD 
 The email address "johndoe123@gmail.co.uk" also satisfies this component, with the TLD "co.uk" matching the pattern.
 However, the email address "john.doe@example" would not match this component since the TLD length is less than 2 characters.
 
-[🔼back to Table of contents ](#table-of-contents)
+[🔼back to table of contents ](#table-of-contents)
+
 
 ***
   
@@ -81,7 +85,8 @@ However, the email address "john.doe@example.com " (with trailing spaces) would 
 
 By using the ^ and $ anchors appropriately, we can precisely define the boundaries of the email address within the input string and ensure that it conforms to the desired structure.
 
-[🔼back to Table of contents ](#table-of-contents)
+[🔼back to table of contents ](#table-of-contents)
+
 
 ***
 
@@ -104,7 +109,8 @@ For example:
 The email address "john.doe@example.com" satisfies this quantifier since the TLD "com" falls within the specified range of 2 to 6 characters.
 However, the email address "john.doe@example" would not match this pattern since the TLD "example" exceeds the maximum limit of 6 characters.
 
-[🔼back to Table of contents ](#table-of-contents)
+[🔼back to table of contents ](#table-of-contents)
+
 
 ***
 
@@ -131,7 +137,8 @@ It allows for a sequence of lowercase letters or dots, with a minimum length of 
 By utilizing grouping constructs, we can establish the structure and enforce the desired patterns for each section of the email address. This helps ensure that the email address matches the expected format.
 
 
-[🔼back to Table of contents ](#table-of-contents)
+[🔼back to table of contents ](#table-of-contents)
+
 
 ***
 
@@ -156,7 +163,8 @@ It ensures that the domain part of the email address follows the specified chara
 This bracket expression allows for matching any lowercase letter or dot in the top-level domain section.
 It restricts the TLD to consist of valid characters while considering the presence of dots for subdomains.
 
-[🔼back to Table of contents ](#table-of-contents)
+[🔼back to table of contents ](#table-of-contents)
+
 
 ***
 
@@ -168,7 +176,8 @@ For example, if we wanted to match email addresses that end with either ".com" o
 
 In this modified pattern, (com|net) signifies that the TLD can be either "com" or "net". The OR operator allows us to create a choice between the two options. If the TLD matches either "com" or "net", the email address will be considered a match.
 
-[🔼back to Table of contents ](#table-of-contents)
+[🔼back to table of contents ](#table-of-contents)
+
 
 ***
 
@@ -182,7 +191,8 @@ In regular expressions, flags are used to modify the behavior of the pattern mat
 
 - Multiline ` m `: The multiline flag alters the behavior of the ^ and $ anchors to match the start and end of each line within a multiline string, rather than just the start and end of the entire string.
 
-[🔼back to Table of contents ](#table-of-contents)
+[🔼back to table of contents ](#table-of-contents)
+
 
 ***
 
@@ -200,7 +210,8 @@ The dot character has a special meaning in regular expressions, representing any
 
 The backslash character is also a special character in regular expressions, used for escaping other special characters. In the email pattern, we use the backslash before the dot (\.) to match a literal dot character in the domain's top-level domain (TLD) group.
 
-[🔼back to Table of contents ](#table-of-contents)
+[🔼back to table of contents ](#table-of-contents)
+
 
 ***
 
