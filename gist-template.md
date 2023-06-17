@@ -50,6 +50,8 @@ For example:
 The email address "john.doe@example.com" satisfies this component, with the TLD "com" matching the pattern.
 The email address "johndoe123@gmail.co.uk" also satisfies this component, with the TLD "co.uk" matching the pattern.
 However, the email address "john.doe@example" would not match this component since the TLD length is less than 2 characters.
+
+[🔼back to top](#Table-of-Contents)
   
 ### Anchors
 
@@ -72,6 +74,8 @@ However, the email address "john.doe@example.com " (with trailing spaces) would 
 
 By using the ^ and $ anchors appropriately, we can precisely define the boundaries of the email address within the input string and ensure that it conforms to the desired structure.
 
+[🔼back to top](#Table-of-Contents)
+
 ### Quantifiers
 
 Quantifiers are special characters in regular expressions that specify the quantity or repetition of a preceding element. They allow us to define how many times a particular character or group of characters should occur. In the email regex pattern /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/, we utilize two main quantifiers: + (plus) and {2,6}.
@@ -91,12 +95,39 @@ For example:
 The email address "john.doe@example.com" satisfies this quantifier since the TLD "com" falls within the specified range of 2 to 6 characters.
 However, the email address "john.doe@example" would not match this pattern since the TLD "example" exceeds the maximum limit of 6 characters.
 
+[🔼back to top](#Table-of-Contents)
 
 ### Grouping Constructs
 
+Grouping constructs, denoted by parentheses ` () `, allow us to group together multiple elements within a regular expression. This grouping serves two main purposes: it helps define the structure of the pattern, and it enables us to apply quantifiers or other operations to the entire group as a single unit.
+
+In the email regex pattern /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/, we can observe the following groups:
+
+- Username Group: ` ([a-z0-9_\.-]+) `
+
+This group encompasses the pattern for the username section of the email address.
+It allows for one or more lowercase letters, digits, underscores, dots, or hyphens.
+
+- Domain Group: ` ([\da-z\.-]+) `
+
+This group represents the domain section of the email address.
+It allows for one or more digits, lowercase letters, dots, or hyphens.
+
+- Top-Level Domain (TLD) Group: ` ([a-z\.]{2,6}) `
+
+This group represents the top-level domain section of the email address.
+It allows for a sequence of lowercase letters or dots, with a minimum length of 2 and a maximum length of 6.
+By utilizing grouping constructs, we can establish the structure and enforce the desired patterns for each section of the email address. This helps ensure that the email address matches the expected format.
+
+[🔼back to top](#Table-of-Contents)
+
 ### Bracket Expressions
 
+[🔼back to top](#Table-of-Contents)
+
 ### Character Classes
+
+[🔼back to top](#Table-of-Contents)
 
 ### The OR Operator
 
@@ -106,12 +137,18 @@ For example, if we wanted to match email addresses that end with either ".com" o
 
 In this modified pattern, (com|net) signifies that the TLD can be either "com" or "net". The OR operator allows us to create a choice between the two options. If the TLD matches either "com" or "net", the email address will be considered a match.
 
+[🔼back to top](#Table-of-Contents)
+
 ### Flags
 
+[🔼back to top](#Table-of-Contents)
+
 ### Character Escapes
+
+[🔼back to top](#Table-of-Contents)
 
 ## Author
 
 A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
 
-[🔼back to top](#Regex-Tutorial)
+[🔼back to top](#Table-of-Contents)
