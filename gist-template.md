@@ -4,6 +4,7 @@ This tutorial aims to provide a comprehensive breakdown and explanation of one o
 
 In this tutorial, we will dive into the intricacies of the Matching an Email and explore each component in detail. By the end, you will have a solid understanding of how the regex functions and how its individual parts contribute to defining the search pattern.
 
+***
 
 ## Summary of the Regex Pattern: Matching an Email
 
@@ -51,7 +52,7 @@ The email address "john.doe@example.com" satisfies this component, with the TLD 
 The email address "johndoe123@gmail.co.uk" also satisfies this component, with the TLD "co.uk" matching the pattern.
 However, the email address "john.doe@example" would not match this component since the TLD length is less than 2 characters.
 
-[🔼back to top](#Table-of-Contents)
+[🔼back to top](#table-of-contents)
   
 ### Anchors
 
