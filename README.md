@@ -218,6 +218,11 @@ The backslash character is also a special character in regular expressions, used
 ## Author
 
 Link to the GitHub profile: https://github.com/Nakisa-Alipour 
+
+Link to the GitHub Gist profile: https://gist.github.com/Nakisa-Alipour
+
 Link to the gist for this tutorial: https://gist.github.com/Nakisa-Alipour/8398913fb277cbc36d2c9aa57759d1e0
+
+
 
 
