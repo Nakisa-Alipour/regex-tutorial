@@ -27,7 +27,7 @@ The chosen regex pattern for this tutorial is designed to match and validate ema
 
 ***
 
-## Regex Components
+### Regex Components
 
 **Component 1: ^([a-z0-9_\.-]+)**
 
